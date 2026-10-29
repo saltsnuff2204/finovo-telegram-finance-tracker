@@ -1,0 +1,3 @@
+TELEGRAM_BOT_TOKEN="replace-me"
+TELEGRAM_WEBHOOK_SECRET="replace-with-a-long-random-value"
+MINI_APP_URL="https://example.com"

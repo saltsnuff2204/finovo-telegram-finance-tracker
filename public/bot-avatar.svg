@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Мои финансы — значок бота</title>
+  <desc id="desc">Светлая монограмма F и фиолетовая монета на тёмном фоне</desc>
+  <defs>
+    <radialGradient id="background" cx="74%" cy="74%" r="95%">
+      <stop offset="0" stop-color="#282038"/>
+      <stop offset=".52" stop-color="#17131f"/>
+      <stop offset="1" stop-color="#0c0c0f"/>
+    </radialGradient>
+    <linearGradient id="coin" x1=".2" x2=".9" y1=".1" y2=".95">
+      <stop offset="0" stop-color="#b49aff"/>
+      <stop offset=".48" stop-color="#9359f9"/>
+      <stop offset="1" stop-color="#6637cf"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="19"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="132" fill="url(#background)"/>
+  <rect x="13" y="13" width="486" height="486" rx="120" fill="none" stroke="#ffffff" stroke-opacity=".09" stroke-width="2"/>
+  <circle cx="322" cy="333" r="78" fill="#8b5cf6" opacity=".23" filter="url(#glow)"/>
+  <path d="M171 347V165h170M171 253h119" fill="none" stroke="#f7f5fb" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="331" cy="328" r="48" fill="url(#coin)"/>
+  <circle cx="331" cy="328" r="39" fill="none" stroke="#ffffff" stroke-opacity=".25" stroke-width="2"/>
+  <path d="m309 329 15 15 29-32" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
