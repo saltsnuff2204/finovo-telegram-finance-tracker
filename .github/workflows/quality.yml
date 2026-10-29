@@ -14,7 +14,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22.13.0
+          # npm 11 is required for this lockfile; Node 24 satisfies the
+          # project's >=22.13.0 engine requirement and matches local checks.
+          node-version: 24.13.0
           cache: npm
       - run: npm ci
       - run: npm run lint

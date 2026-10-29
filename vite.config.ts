@@ -1,12 +1,21 @@
 import vinext from "vinext";
+import { existsSync, readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { defineConfig } from "vite";
-import hostingConfig from "./.openai/hosting.json";
+import publicHostingConfig from "./config/hosting.example.json";
 import { readExecutionProfile } from "./scripts/execution-profile.mjs";
 import { sites } from "./build/sites-vite-plugin";
 import { connectorPreview } from "./build/connector-preview-plugin.mjs";
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
   "00000000-0000-4000-8000-000000000000";
+
+type HostingConfig = { d1?: string; r2?: string | null };
+
+const localHostingConfigPath = resolve(process.cwd(), ".openai", "hosting.json");
+const hostingConfig: HostingConfig = existsSync(localHostingConfigPath)
+  ? JSON.parse(readFileSync(localHostingConfigPath, "utf8")) as HostingConfig
+  : publicHostingConfig;
 
 const { d1, r2 } = hostingConfig;
 
